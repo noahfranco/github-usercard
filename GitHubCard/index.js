@@ -1,7 +1,14 @@
-/* Step 1: using axios, send a GET request to the following URL 
-           (replacing the palceholder with your Github name):
-           https://api.github.com/users/<your name>
-*/
+//  Step 1: using axios, send a GET request to the following URL 
+//            (replacing the palceholder with your Github name):
+         
+axios.get("https://api.github.com/users/noahfranco")
+.then(data => {
+  console.log("Noahs GitHub", data);
+})
+.catch(error => {
+  console.log("This gitHub AIP does is not working at the moment", error)
+}); 
+
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -53,3 +60,8 @@ const followersArray = [];
   luishrd
   bigknell
 */
+
+// function githubCards(name, location, followers, following, Bio) {
+//     const card = document.createElement("div"); 
+//     const name = document. createElement("name"); 
+// }
