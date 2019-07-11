@@ -32,7 +32,18 @@ axios.get("https://api.github.com/users/noahfranco")
           user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+const followersArray = ["tetondan", "dustinmyers", "justsml", "luishrd", "bigknell" ];
+
+followersArray.forEach((element) => {
+  axios.get(`https://api.github.com/users/${element}`) 
+  .then(data => {
+    githubCard(data)
+    console.log("Noahs GitHub", data);
+  })
+  
+}) 
+
+
 
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
@@ -101,9 +112,11 @@ function githubCard(noahsinfo) {
   username.textContent = noahsinfo.data.login
   location.textContent = noahsinfo.data.location
   // not working
-  link.setAttribute("a", `${noahsinfo.data.url}`)
+  link.setAttribute("href", `${noahsinfo.data.url}`)
   // not working 
-  followers.textContent
+  followers.textContent = noahsinfo.data.followers
+  following.textContent = noahsinfo.data.following
+  bio.textContent = noahsinfo.data.bio
 
   
 
