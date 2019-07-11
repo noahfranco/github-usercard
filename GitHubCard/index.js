@@ -40,7 +40,6 @@ followersArray.forEach((element) => {
     githubCard(data)
     console.log("Noahs GitHub", data);
   })
-  
 }) 
 
 
