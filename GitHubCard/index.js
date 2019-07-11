@@ -3,6 +3,7 @@
          
 axios.get("https://api.github.com/users/noahfranco")
 .then(data => {
+  githubCard(data)
   console.log("Noahs GitHub", data);
 })
 .catch(error => {
@@ -69,7 +70,6 @@ function githubCard(noahsinfo) {
   const name = document.createElement("h3"); 
   const username = document.createElement("p"); 
   const location = document.createElement("p"); 
-  const profile = document.createElement("p");
   const link = document.createElement("a"); 
   const followers = document.createElement("p"); 
   const following = document.createElement("p"); 
@@ -82,7 +82,41 @@ function githubCard(noahsinfo) {
   name.classList.add("name"); 
   username.classList.add("username"); 
 
-  card.appendChild("div"); 
+  
+  card.appendChild(img);
+  card.appendChild(cardInfo); 
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(username); 
+  cardInfo.appendChild(location);
+  cardInfo.appendChild(link); 
+  cardInfo.appendChild(followers); 
+  cardInfo.appendChild(following); 
+  cardInfo.appendChild(bio); 
+
+  // showing it on the HTML page 
+  const test = document.querySelector(".cards")
+  test.appendChild(card) 
+  img.setAttribute("src", `${noahsinfo.data.avatar_url}`)
+  name.textContent = noahsinfo.data.name
+  username.textContent = noahsinfo.data.login
+  location.textContent = noahsinfo.data.location
+  // not working
+  link.setAttribute("a", `${noahsinfo.data.url}`)
+  // not working 
+  followers.textContent
+
+  
+
+  // const card = document.querySelector(".card")
+
+  console.log(card)
+
+
+  
+  return card
+  
+
+  
   
 
 
