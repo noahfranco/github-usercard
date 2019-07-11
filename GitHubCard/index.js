@@ -61,7 +61,36 @@ const followersArray = [];
   bigknell
 */
 
-// function githubCards(name, location, followers, following, Bio) {
-//     const card = document.createElement("div"); 
-//     const name = document. createElement("name"); 
-// }
+function githubCard(noahsinfo) {
+  // This creates the elements 
+  const card = document.createElement("div"); 
+  const img = document.createElement("img");
+  const cardInfo = document.createElement("div");  
+  const name = document.createElement("h3"); 
+  const username = document.createElement("p"); 
+  const location = document.createElement("p"); 
+  const profile = document.createElement("p");
+  const link = document.createElement("a"); 
+  const followers = document.createElement("p"); 
+  const following = document.createElement("p"); 
+  const bio = document.createElement("p"); 
+
+
+  // adding syleing from CSS to JS file 
+  card.classList.add("card"); 
+  cardInfo.classList.add("card-info"); 
+  name.classList.add("name"); 
+  username.classList.add("username"); 
+
+  card.appendChild("div"); 
+  
+
+
+
+
+
+
+
+  
+  
+}
