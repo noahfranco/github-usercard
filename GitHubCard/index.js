@@ -117,8 +117,6 @@ function githubCard(noahsinfo) {
   following.textContent = noahsinfo.data.following
   bio.textContent = noahsinfo.data.bio
 
-  
-
   // const card = document.querySelector(".card")
 
   console.log(card)
